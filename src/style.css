@@ -1,0 +1,135 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 16px;
+  background-color: #f0f0f0;
+  width: 800px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.pinterest-layout {
+  column-count: 3;
+  column-gap: 16px;
+}
+
+.card {
+  break-inside: avoid;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 12px;
+}
+
+.url-input {
+  width: calc(100% - 16px);
+  margin-bottom: 8px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.info {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.copy-btn {
+  background-color: #e60023;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.copy-btn:hover {
+  background-color: #ad081b;
+}
+
+.copy-btn i {
+  margin-right: 6px;
+}
+
+/* 既存のCSSに以下を追加 */
+
+.actions {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-btn {
+  background-color: #0077b5;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+  background-color: #005582;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.actions {
+  margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.action-btn {
+  flex: 1 1 auto;
+  min-width: 120px;
+  background-color: #0077b5;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
