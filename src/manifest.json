@@ -4,10 +4,18 @@
   "version": "1.0",
   "description": "Extract and display image URLs from the current page",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "downloads",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "<all_urls>"
   ],
   "action": {
-    "default_popup": "popup.html"
+    "default_title": "Image URL Extractor"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
   },
   "icons": {
     "48": "icon48.png",
@@ -33,5 +41,11 @@
         "<all_urls>"
       ]
     }
-  ]
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; img-src 'self' data: https:;"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
 }
