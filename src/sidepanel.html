@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image URL Extractor</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css2.css">
+    <link rel="stylesheet" href="all.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="jquery-3.7.1.min.js"></script>
     <script src="jszip.min.js"></script>
@@ -17,11 +17,21 @@
     <div class="container">
         <h1>Image URL Extractor</h1>
         <div class="actions">
-            <button id="selectAll" class="action-btn"><i class="fas fa-check-square"></i> Select All</button>
-            <button id="deselectAll" class="action-btn"><i class="fas fa-square"></i> Deselect All</button>
-            <button id="selectLarge" class="action-btn"><i class="fas fa-image"></i> Select 100x100+</button>
-            <button id="copySelected" class="action-btn"><i class="fas fa-copy"></i> Copy Selected URLs</button>
-            <button id="downloadZip" class="action-btn"><i class="fas fa-file-archive"></i> Download ZIP</button>
+            <button id="selectAll"
+                class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none"><i
+                    class="fas fa-check-square"></i> Select All</button>
+            <button id="deselectAll"
+                class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none"><i
+                    class="fas fa-square"></i> Deselect All</button>
+            <button id="selectLarge"
+                class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none"><i
+                    class="fas fa-image"></i> Select 100x100+</button>
+            <button id="copySelected"
+                class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none"><i
+                    class="fas fa-copy"></i> Copy Selected URLs</button>
+            <button id="downloadZip"
+                class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none"><i
+                    class="fas fa-file-archive"></i> Download ZIP</button>
         </div>
         <div id="imageContainer" class="pinterest-layout"></div>
     </div>

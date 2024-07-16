@@ -123,11 +123,11 @@ function getFileExtension(url) {
 function downloadImagesAsZip(urls) {
   const zip = new JSZip();
   const fetchPromises = urls.map((url, index) =>
-    fetch(url)
+    fetch(url, { mode: "no-cors" })
       .then(response => response.blob())
       .then(blob => {
-        const extension = url.split('.').pop().split(/\#|\?/)[0];
-        zip.file(`image${index + 1}.${extension}`, blob);
+        //const extension = url.split('.').pop().split(/\#|\?/)[0];
+        zip.file(`image${index + 1}.jpg`, blob);
       })
   );
 
