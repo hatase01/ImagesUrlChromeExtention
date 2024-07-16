@@ -123,10 +123,18 @@ function getFileExtension(url) {
 function downloadImagesAsZip(urls) {
   const zip = new JSZip();
   const fetchPromises = urls.map((url, index) =>
-    fetch(url)
+    fetch(url, { mode: 'cors', credentials: 'include' })
       .then(response => response.blob())
       .then(blob => {
-        const extension = url.split('.').pop().split(/\#|\?/)[0];
+        ct = response.getResponseHeader("Content-Type");
+        if (ct == "image/png") {
+          const extention = 'png';
+        } else if (ct == "image/svg+xml") {
+          const extension = 'svg';
+        } else {
+          const extension = 'jpg';
+        }
+        //const extension = url.split('.').pop().split(/\#|\?/)[0];
         zip.file(`image${index + 1}.${extension}`, blob);
       })
   );
