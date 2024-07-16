@@ -1,30 +1,41 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image URL Extractor</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <title>Image URL Picker</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="jquery-3.7.1.min.js"></script>
-    <script src="jszip.min.js"></script>
-    <script src="sidepanel.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <h1>Image URL Extractor</h1>
-        <div class="actions">
-            <button id="selectAll" class="action-btn"><i class="fas fa-check-square"></i> Select All</button>
-            <button id="deselectAll" class="action-btn"><i class="fas fa-square"></i> Deselect All</button>
-            <button id="selectLarge" class="action-btn"><i class="fas fa-image"></i> Select 100x100+</button>
-            <button id="copySelected" class="action-btn"><i class="fas fa-copy"></i> Copy Selected URLs</button>
-            <button id="downloadZip" class="action-btn"><i class="fas fa-file-archive"></i> Download ZIP</button>
+        <div id="filterControls">
+            <label for="minWidth">Min Width (px):</label>
+            <input type="number" id="minWidth" value="0" min="0">
+            <label for="minHeight">Min Height (px):</label>
+            <input type="number" id="minHeight" value="0" min="0">
+            <label for="fileType">File Type:</label>
+            <select id="fileType">
+                <option value="all">All</option>
+                <option value="jpg">JPG</option>
+                <option value="png">PNG</option>
+                <option value="gif">GIF</option>
+                <option value="svg">SVG</option>
+            </select>
+            <label for="maxFileSize">Max File Size (MB):</label>
+            <input type="number" id="maxFileSize" value="0" min="0">
+            <button id="applyFilter" data-i18n="applyFilter">Apply Filter</button>
         </div>
-        <div id="imageContainer" class="pinterest-layout"></div>
+        <div id="controls">
+            <button id="toggleAll" data-i18n="toggleAll">Toggle All</button>
+            <button id="downloadZip" data-i18n="downloadZip">Download as ZIP</button>
+        </div>
+        <div id="progressBar" class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <div id="imageList"></div>
     </div>
+    <script src="jszip.min.js"></script>
+    <script src="sidepanel.js"></script>
 </body>
 
 </html>

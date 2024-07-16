@@ -1,0 +1,44 @@
+{
+    "applyFilter": {
+        "message": "フィルター適用",
+        "description": "Button to apply image filter"
+    },
+    "toggleAll": {
+        "message": "すべて切り替え",
+        "description": "Button to toggle all images"
+    },
+    "downloadZip": {
+        "message": "ZIPでダウンロード",
+        "description": "Button to download selected images as ZIP"
+    },
+    "checkAll": {
+        "message": "すべてチェック",
+        "description": "Button text when not all images are checked"
+    },
+    "uncheckAll": {
+        "message": "すべて解除",
+        "description": "Button text when all images are checked"
+    },
+    "selectImage": {
+        "message": "選択",
+        "description": "Label for image selection checkbox"
+    },
+    "errorFetchingImages": {
+        "message": "画像の取得中にエラーが発生しました。もう一度お試しください。",
+        "description": "Error message when unable to fetch images"
+    },
+    "noImagesSelected": {
+        "message": "画像が選択されていません。少なくとも1つの画像を選択してください。",
+        "description": "Error message when no images are selected for download"
+    },
+    "errorDownloadingImage": {
+        "message": "画像のダウンロード中にエラーが発生しました: $URL$",
+        "description": "Error message when an image fails to download",
+        "placeholders": {
+            "url": {
+                "content": "$1",
+                "example": "https://example.com/image.jpg"
+            }
+        }
+    }
+}

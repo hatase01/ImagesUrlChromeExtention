@@ -1,51 +1,40 @@
+// manifest.json
 {
   "manifest_version": 3,
-  "name": "Image URL Extractor",
-  "version": "1.0",
-  "description": "Extract and display image URLs from the current page",
+  "name": "Image URL Picker",
+  "version": "2.1",
+  "description": "Pick image URLs and download them as a ZIP file",
   "permissions": [
     "activeTab",
+    "sidePanel",
     "downloads",
-    "sidePanel"
+    "storage"
   ],
   "host_permissions": [
     "<all_urls>"
   ],
   "action": {
-    "default_title": "Image URL Extractor"
+    "default_title": "Image URL Picker"
   },
   "side_panel": {
     "default_path": "sidepanel.html"
   },
-  "icons": {
-    "48": "icon48.png",
-    "128": "icon128.png"
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "jquery-3.7.1.min.js",
-        "content.js"
-      ]
-    }
-  ],
-  "web_accessible_resources": [
-    {
-      "resources": [
-        "jquery-3.7.1.min.js"
-      ],
-      "matches": [
-        "<all_urls>"
-      ]
-    }
-  ],
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'; img-src 'self' data: https:;"
-  },
   "background": {
     "service_worker": "background.js"
-  }
+  },
+  "commands": {
+    "toggle-all": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+A"
+      },
+      "description": "Toggle all images"
+    },
+    "download-zip": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+D"
+      },
+      "description": "Download selected images as ZIP"
+    }
+  },
+  "default_locale": "en"
 }

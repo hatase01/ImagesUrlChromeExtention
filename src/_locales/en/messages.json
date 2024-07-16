@@ -1,0 +1,44 @@
+{
+    "applyFilter": {
+        "message": "Apply Filter",
+        "description": "Button to apply image filter"
+    },
+    "toggleAll": {
+        "message": "Toggle All",
+        "description": "Button to toggle all images"
+    },
+    "downloadZip": {
+        "message": "Download as ZIP",
+        "description": "Button to download selected images as ZIP"
+    },
+    "checkAll": {
+        "message": "Check All",
+        "description": "Button text when not all images are checked"
+    },
+    "uncheckAll": {
+        "message": "Uncheck All",
+        "description": "Button text when all images are checked"
+    },
+    "selectImage": {
+        "message": "Select",
+        "description": "Label for image selection checkbox"
+    },
+    "errorFetchingImages": {
+        "message": "Error fetching images. Please try again.",
+        "description": "Error message when unable to fetch images"
+    },
+    "noImagesSelected": {
+        "message": "No images selected. Please select at least one image.",
+        "description": "Error message when no images are selected for download"
+    },
+    "errorDownloadingImage": {
+        "message": "Error downloading image: $URL$",
+        "description": "Error message when an image fails to download",
+        "placeholders": {
+            "url": {
+                "content": "$1",
+                "example": "https://example.com/image.jpg"
+            }
+        }
+    }
+}
